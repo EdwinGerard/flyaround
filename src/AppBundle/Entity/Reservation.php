@@ -184,4 +184,9 @@ class Reservation
     {
         return $this->flight;
     }
+
+    public function __toString ()
+    {
+        return "$this->id";
+    }
 }
