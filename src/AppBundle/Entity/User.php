@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class User
 {
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Flight", mappedBy="reviewAuthor")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Review", mappedBy="reviewAuthor")
      */
     private $reviewAuthors;
 
@@ -23,7 +23,7 @@ class User
     private $pilots;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Flight", mappedBy="passenger")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Reservation", mappedBy="passenger")
      */
     private $passengers;
 
