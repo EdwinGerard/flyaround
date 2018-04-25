@@ -232,4 +232,9 @@ class PlaneModel
     {
         return $this->planes;
     }
+
+    public function __toString ()
+    {
+        return $this->model;
+    }
 }

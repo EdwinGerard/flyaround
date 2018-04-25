@@ -139,7 +139,7 @@ class Review
 
     public function __toString ()
     {
-        return "$this->id";
+        return $this->id . " ";
     }
 
     /**
