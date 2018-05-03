@@ -383,4 +383,9 @@ class Flight
     {
         return $this->flights;
     }
+
+    public function __toString ()
+    {
+        return "$this->id";
+    }
 }
