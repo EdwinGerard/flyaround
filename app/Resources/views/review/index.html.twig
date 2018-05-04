@@ -7,34 +7,32 @@
 
     <table>
         <tbody>
-        <tr>
-            <th>User (id)</th>
-            <td>{{ user.id }}</td>
-        </tr>
-        <tr>
-            <th>Review (id)</th>
-            <td>{{ review.id }}</td>
-        </tr>
-        <tr>
-            <th>Review Author</th>
-            <td>{{ review.reviewAuthor }}</td>
-        </tr>
-        <tr>
-            <th>User rated</th>
-            <td>{{ review.userRated }}</td>
-        </tr>
-        <tr>
-            <th>Content</th>
-            <td>{{ review.text }}</td>
-        </tr>
-        <tr>
-            <th>Publication Date</th>
-            <td>{{ review.publicationDate }}</td>
-        </tr>
-        <tr>
-            <th>Note</th>
-            <td>{{ review.note }}</td>
-        </tr>
+        {% for review in reviews %}
+            <tr>
+                <th>Review (id)</th>
+                <td>{{ review.id }}</td>
+            </tr>
+            <tr>
+                <th>Review Author</th>
+                <td>{{ review.reviewAuthor }}</td>
+            </tr>
+            <tr>
+                <th>User rated</th>
+                <td>{{ review.userRated }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td>{{ review.text }}</td>
+            </tr>
+            <tr>
+                <th>Publication Date</th>
+                <td>{{ review.publicationDate }}</td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td>{{ review.note }}</td>
+            </tr>
+        {% endfor %}
         </tbody>
     </table>
 

@@ -19,13 +19,14 @@ class ReviewController extends Controller
 {
     /**
      * @Method("GET")
-     * @Route("/{review_id}/user/{user_id}", name="review_index", requirements={"review_id": "\d+"})
-     * @ParamConverter("review", options={"mapping": {"review_id": "id"}})
-     * @ParamConverter("user", options={"mapping": {"user_id": "id"}})
+     * @Route("/")
      */
-    public function indexAction(Review $review, User $user)
+    public function indexAction()
     {
-        return $this->render('review/index.html.twig', array('review' => $review, 'user' => $user));
+        $em = $this->getDoctrine()->getManager();
+
+        $reviews = $em->getRepository('AppBundle:Review')->findAll();
+        return $this->render('review/index.html.twig', array('reviews' => $reviews));
     }
 
     /**
