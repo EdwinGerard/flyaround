@@ -5,42 +5,42 @@
 
     <table>
         <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ flight.id }}</td>
-            </tr>
-            <tr>
-                <th>Nbfreeseats</th>
-                <td>{{ flight.nbFreeSeats }}</td>
-            </tr>
-            <tr>
-                <th>Seatprice</th>
-                <td>{{ flight.seatPrice }}</td>
-            </tr>
-            <tr>
-                <th>Takeofftime</th>
-                <td>{% if flight.takeOffTime %}{{ flight.takeOffTime|date('Y-m-d H:i:s') }}{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Publicationdate</th>
-                <td>{% if flight.publicationDate %}{{ flight.publicationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ flight.description }}</td>
-            </tr>
-            <tr>
-                <th>Wasdone</th>
-                <td>{% if flight.wasDone %}Yes{% else %}No{% endif %}</td>
-            </tr>
-            <tr>
-                <th>Distance</th>
-                <td>{% if distance %}{{ distance|number_format(2, ',', ' ') }}{% endif %} {{ unit }}</td>
-            </tr>
-            <tr>
-                <th>Temps</th>
-                <td>{% if time %}{{ time|number_format(2, ',', ' ') }}{% endif %} h</td>
-            </tr>
+        <tr>
+            <th>Id</th>
+            <td>{{ flight.id }}</td>
+        </tr>
+        <tr>
+            <th>Nbfreeseats</th>
+            <td>{{ flight.nbFreeSeats }}</td>
+        </tr>
+        <tr>
+            <th>Seatprice</th>
+            <td>{{ flight.seatPrice }}</td>
+        </tr>
+        <tr>
+            <th>Takeofftime</th>
+            <td>{% if flight.takeOffTime %}{{ flight.takeOffTime|date('Y-m-d H:i:s') }}{% endif %}</td>
+        </tr>
+        <tr>
+            <th>Publicationdate</th>
+            <td>{% if flight.publicationDate %}{{ flight.publicationDate|date('Y-m-d H:i:s') }}{% endif %}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>{{ flight.description }}</td>
+        </tr>
+        <tr>
+            <th>Wasdone</th>
+            <td>{% if flight.wasDone %}Yes{% else %}No{% endif %}</td>
+        </tr>
+        <tr>
+            <th>Distance</th>
+            <td>{% if distance %}{{ distance|number_format(2, ',', ' ') }}{% endif %} {{ unit }}</td>
+        </tr>
+        <tr>
+            <th>Temps</th>
+            <td>{% if time %}{{ time|number_format(2, ',', ' ') }}{% endif %} h</td>
+        </tr>
         </tbody>
     </table>
 
@@ -53,7 +53,7 @@
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+            <input type="submit" value="Delete">
             {{ form_end(delete_form) }}
         </li>
     </ul>

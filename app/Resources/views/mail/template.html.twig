@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+</head>
+    <body>
+    <div class="jumbotron">
+        <h1 class="display-4">{{ type | capitalize }} de Flyaround Company</h1>
+        <h2 class="display-4">Cher(e) {{ user.firstName }} {{ user.lastName }}</h2>
+
+        <p class="lead">{{ content }}</p>
+
+        {% if user.isACertifiedPilot == 1 %}
+        <figure>
+            <img src="https://media.giphy.com/media/oBqQDEOGT11yo/giphy.gif">
+        </figure>
+        {% else %}
+        <figure>
+            <img src="https://media.giphy.com/media/W9PZiRyu7ZSTe/giphy.gif">
+        </figure>
+        {% endif %}
+
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    </body>
+</html>
