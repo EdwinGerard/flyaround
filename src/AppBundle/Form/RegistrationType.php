@@ -8,6 +8,7 @@
 
 namespace AppBundle\Form;
 
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -24,6 +25,7 @@ class RegistrationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('isACertifiedPilot', CheckboxType::class, array('label' => 'isACertifiedpilot'))
             ->add('firstName', TextType::class, array('label' => 'form.firstName', 'translation_domain' => 'FOSUserBundle'))
             ->add('lastName', TextType::class, array('label' => 'form.lastName', 'translation_domain' => 'FOSUserBundle'))
             ->add('phoneNumber', TextType::class, array('label' => 'form.phoneNumber', 'translation_domain' => 'FOSUserBundle'))
